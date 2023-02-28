@@ -1,0 +1,25 @@
+mutation {
+	createCustomer(name:"Google", industry:"Software") {
+    customer {
+      id
+      name
+      industry
+    }
+  }
+}
+
+{
+      customerByName(name: "Microsoft") {
+        id
+        name
+        industry
+      }
+}
+
+{
+      customer {
+        id
+        name
+        industry
+      }
+}
