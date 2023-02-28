@@ -1,3 +1,21 @@
+Adding a order to a customer by id
+mutation {
+	createOrder(customer:1, description:"Monitor", totalInCents:10000)
+  {
+  	order {
+      id
+      customer {
+        id
+        name
+        industry
+      }
+      description
+      totalInCents
+    }
+  }
+}
+
+Finding a customer by name:
 {
       customerByName(name:"Google") {
         id
@@ -11,6 +29,7 @@
       }
 }
 
+Finding all customers info  + orders
 {
       customers {
         id
@@ -24,6 +43,8 @@
       }
 }
 
+Adding a new customer
+
 mutation {
 	createCustomer(name:"Google", industry:"Software") {
     customer {
@@ -34,6 +55,7 @@ mutation {
   }
 }
 
+Getting a customer by name
 {
       customerByName(name: "Microsoft") {
         id
@@ -41,6 +63,8 @@ mutation {
         industry
       }
 }
+
+Getting all customers
 
 {
       customers {
