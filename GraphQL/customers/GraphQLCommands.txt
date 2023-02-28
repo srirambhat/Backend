@@ -1,3 +1,29 @@
+{
+      customerByName(name:"Google") {
+        id
+        name
+        industry
+        orders {
+          id
+          description
+          totalInCents
+        }
+      }
+}
+
+{
+      customers {
+        id
+        name
+        industry
+        orders {
+          id
+          description
+          totalInCents
+        }
+      }
+}
+
 mutation {
 	createCustomer(name:"Google", industry:"Software") {
     customer {
@@ -17,7 +43,7 @@ mutation {
 }
 
 {
-      customer {
+      customers {
         id
         name
         industry
